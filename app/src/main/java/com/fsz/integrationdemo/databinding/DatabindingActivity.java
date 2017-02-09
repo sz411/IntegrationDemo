@@ -1,5 +1,6 @@
 package com.fsz.integrationdemo.databinding;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,8 +16,10 @@ public class DatabindingActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_databinding);
-
+//        setContentView(R.layout.activity_databinding);
+        ActivityDatabindingBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_databinding);
+        User user = new User();
+        binding.setUser(user);
     }
 
 }

@@ -6,6 +6,6 @@ package com.fsz.integrationdemo.databinding;
 
 public class User {
 
-    public String test = "zheshi yige ceshi";
+    public String test;
 
 }
