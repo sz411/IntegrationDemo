@@ -15,9 +15,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, DatabindingActivity.class));
     }
 
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-    }
-
 }

@@ -5,6 +5,9 @@
         <variable
             name="user"
             type="com.fsz.integrationdemo.databinding.User"/>
+        <variable
+            name="event"
+            type="com.fsz.integrationdemo.databinding.Event"/>
     </data>
 <LinearLayout
     android:orientation="vertical"
@@ -14,7 +17,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@{user.test}"/>
+        android:text="@{user.name}"
+        android:onClick="@{event.show}"/>
 
 </LinearLayout>
 </layout>
