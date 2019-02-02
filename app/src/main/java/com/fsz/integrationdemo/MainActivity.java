@@ -13,8 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.e("fsz","aaaa");
-        startActivity(new Intent(this, DatabindingActivity.class));
+//        startActivity(new Intent(this, DatabindingActivity.class));
     }
 
 }
