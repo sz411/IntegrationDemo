@@ -43,7 +43,7 @@ public class DrawTextView extends TextView {
     private void stretchViewRight(float right){
         ViewGroup.LayoutParams params = getLayoutParams();
         params.width = (int) (getWidth() + right);
-        Log.e("fsz","width:" + params.width );
+//        Log.e("fsz","width:" + params.width );
         setLayoutParams(params);
     }
 
