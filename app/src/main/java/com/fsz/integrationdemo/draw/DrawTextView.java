@@ -34,17 +34,23 @@ public class DrawTextView extends TextView {
     }
 
     private void stretchViewLeft(float left){
-        ViewGroup.LayoutParams params = getLayoutParams();
-        params.width = (int) (getWidth() - left);
-        Log.e("fsz","width:" + params.width );
-        setLayoutParams(params);
+//        ViewGroup.LayoutParams params = getLayoutParams();
+//        params.width = (int) (getWidth() - left);
+//        Log.e("fsz","width:" + params.width );
+//        setLayoutParams(params);
+
+        Log.e("fsz","----------------------------" + left);
+        layout((int) (getLeft() + left),getTop(),getRight(),getBottom());
     }
 
     private void stretchViewRight(float right){
-        ViewGroup.LayoutParams params = getLayoutParams();
-        params.width = (int) (getWidth() + right);
-        Log.e("fsz","width:" + params.width );
-        setLayoutParams(params);
+//        ViewGroup.LayoutParams params = getLayoutParams();
+//        params.width = (int) (getWidth() + right);
+//        Log.e("fsz","width:" + params.width );
+//        setLayoutParams(params);
+
+        Log.e("fsz","----------------------------" + right);
+        layout(getLeft(), getTop(), (int) (getRight() + right),getBottom());
     }
 
     @Override
@@ -64,7 +70,7 @@ public class DrawTextView extends TextView {
                 float dx = Math.abs(x - preX);
                 float dy = Math.abs(y - preY);
                 Log.e("fsz","----------------------------");
-                if (dx >= 1){
+//                if (dx >= 5){
                     if (touchX > (left - 30) && touchX < (left + 30)){
                         stretchViewLeft(x - preX);
                     }
@@ -73,7 +79,7 @@ public class DrawTextView extends TextView {
                     }
                     preX = x;
                     preY = y;
-                }
+//                }
                 break;
         }
         return true;
